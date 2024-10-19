@@ -7,13 +7,7 @@ const Footer = () => {
       <div className="max-w-screen-xl w-full mx-auto px-6 sm:px-8 lg:px-16 grid grid-rows-6 sm:grid-rows-1 grid-flow-row sm:grid-flow-col grid-cols-3 sm:grid-cols-12 gap-4">
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start ">
           <div className="flex flex-nowrap">
-            <Image
-              src="/assets/logo_cpnsindonesiaonline.png" // Pastikan path dan nama file benar
-              alt="Logo CPNS INDONESIA ONLINE"
-              className="h-9 w-auto mb-6" // Mengatur tinggi dan lebar otomatis untuk menjaga rasio
-              width={150} // Atur width yang sesuai
-              height={50} // Atur height yang sesuai
-            />
+            <Image src="/assets/logo_cpnsindonesiaonline.png" alt="Logo CPNS INDONESIA ONLINE" className="h-9 w-auto mb-6" width={150} height={50} />
           </div>
 
           <p className="mb-4">
