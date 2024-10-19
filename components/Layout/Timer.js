@@ -34,7 +34,7 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="fixed ml-4 sm:ml-10 bottom-5 z-50 w-full max-w-xs md:max-w-lg">
+    <div className="fixed ml-4 sm:ml-10 bottom-16 z-50 w-full max-w-xs md:max-w-lg">
       <div className="flex flex-col items-center justify-center p-2 md:p-4">
         {/* Informasi Promo */}
         <div className="flex items-center justify-center mb-4">
