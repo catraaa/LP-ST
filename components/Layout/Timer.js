@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 
 const Timer = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   useEffect(() => {
-    // atur target waktu 3 jam ke depan
-    const targetDate = new Date().setHours(new Date().getHours() + 3);
+    // Tetapkan target waktu tetap (misalnya, 16 Oktober 2024, pukul 23:59:59)
+    const targetDate = new Date("2024-10-20T23:59:59");
 
     const calculateTimeLeft = () => {
-      const difference = new Date(targetDate) - new Date();
+      const difference = targetDate - new Date();
       let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
       if (difference > 0) {
@@ -23,19 +28,17 @@ const Timer = () => {
       setTimeLeft(timeLeft);
     };
 
-    const timer = setInterval(() => calculateTimeLeft(), 1000);
+    const timer = setInterval(calculateTimeLeft, 1000);
 
     return () => clearInterval(timer); // Bersihkan interval saat komponen unmount
   }, []);
 
   return (
-    <div className="fixed ml-20 bottom-10 z-50"> {/* Tambah z-index */}
+    <div className="fixed ml-20 bottom-10 z-50">
       <div className="flex flex-col items-center justify-center p-4">
         {/* Informasi Promo */}
         <div className="flex items-center justify-center space-x-4 mb-6">
-          <span className="bg-maroon-500 text-white-500 px-4 py-2 rounded-full">
-            Promo 99rb Berakhir Hari Rabu (16 Oktober)
-          </span>
+          <span className="bg-maroon-500 text-white-500 px-4 py-2 rounded-full">Promo 99rb Berakhir Hari Rabu (16 Oktober)</span>
         </div>
 
         {/* Container Box */}
@@ -66,10 +69,8 @@ const Timer = () => {
 
             {/* Tombol Aksi di Sebelah Kanan */}
             <a href="https://www.example.com">
-            <button className="ml-5 bg-maroon-500 text-white-500 px-6 py-2 rounded-full hover:bg-maroon-600 transition-colors font-bold">
-              Ambil Promo
-            </button>
-              </a>
+              <button className="ml-5 bg-maroon-500 text-white-500 px-6 py-2 rounded-full hover:bg-maroon-600 transition-colors font-bold">Ambil Promo</button>
+            </a>
           </div>
         </div>
       </div>

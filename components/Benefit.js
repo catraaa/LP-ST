@@ -8,6 +8,33 @@ const scrollAnimation = {
 };
 
 const Benefit = () => {
+  const benefits = [
+    {
+      title: "Materi TWK, TIU, TKP",
+      description: "Penjelasan lengkap dan latihan soal untuk Tes Wawasan Kebangsaan, Tes Intelegensi Umum, dan Tes Karakteristik Pribadi.",
+    },
+    {
+      title: "Simulasi CAT",
+      description: "Latihan menghadapi tes berbasis komputer dengan simulasi real-time.",
+    },
+    {
+      title: "Bimbingan SKB & Wawancara",
+      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+    },
+    {
+      title: "Bimbingan SKB & Wawancara",
+      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+    },
+    {
+      title: "Bimbingan SKB & Wawancara",
+      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+    },
+    {
+      title: "Bimbingan SKB & Wawancara",
+      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+    },
+  ];
+
   return (
     <div className="max-w-screen-xl pt-20 px-6 sm:px-8 lg:px-16 mx-auto" id="benefit">
       <div className="flex flex-col items-center justify-center text-center">
@@ -29,40 +56,22 @@ const Benefit = () => {
 
       {/* Grid layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
-        {/* Item 1 */}
-        {[
-          {
-            title: "Materi TWK, TIU, TKP",
-            description: "Penjelasan lengkap dan latihan soal untuk Tes Wawasan Kebangsaan, Tes Intelegensi Umum, dan Tes Karakteristik Pribadi.",
-          },
-          {
-            title: "Simulasi CAT",
-            description: "Latihan menghadapi tes berbasis komputer dengan simulasi real-time.",
-          },
-          {
-            title: "Bimbingan SKB & Wawancara",
-            description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
-          },
-          {
-            title: "Bimbingan SKB & Wawancara",
-            description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
-          },
-          {
-            title: "Bimbingan SKB & Wawancara",
-            description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
-          },
-        ].map((item, index) => (
+        {benefits.map((item, index) => (
           <motion.div
             key={index}
             initial="hidden"
             whileInView="visible"
             variants={scrollAnimation}
             transition={{ duration: 0.1 }}
-            whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }} // efek saat hover
-            className="border-2 border-gray-100 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 ease-in-out"
+            whileHover={{ scale: 1.02, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }} // efek saat hover yang lebih halus
+            className="border-2 border-gray-100 rounded-lg p-6 flex flex-col justify-between transition-all duration-300 ease-in-out max-w-[300px] mx-auto" // menambahkan max-w untuk batas ukuran box
           >
             <div className="flex justify-center items-center mb-4">
-              <img src="/assets/Icon/user.png" alt={item.title} className="w-[50px] h-[50px]" />
+              <img
+                src="/assets/Icon/user.png"
+                alt={item.title}
+                className="w-12 h-12" // Ukuran gambar lebih konsisten
+              />
             </div>
             <h4 className="text-lg font-bold text-center">{item.title}</h4>
             <p className="text-black-500 text-center flex-grow">{item.description}</p>
