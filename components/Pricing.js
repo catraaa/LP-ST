@@ -47,8 +47,11 @@ const Pricing = () => {
                   <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
                 </div>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-2xl font-bold text-black-600 dark:text-white ">Rp10.000.000</span>
-                  <a href="#" className="text-white-500 bg-maroon-500 hover:bg-maroon-600 focus:ring-4 focus:outline-none focus:ring-maroon-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                  <span className="text-2xl font-bold text-black-600 dark:text-white">Rp10.000.000</span>
+                  <a
+                    href="#"
+                    className="text-white-500 bg-maroon-500 hover:bg-maroon-600 focus:ring-4 focus:outline-none focus:ring-maroon-300 font-medium rounded-lg text-lg px-5 py-2.5 min-w-[120px] text-center transition-all duration-200"
+                  >
                     Beli
                   </a>
                 </div>
