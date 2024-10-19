@@ -22,17 +22,17 @@ const Footer = () => {
           <div className="flex w-full mt-2 mb-8 -mx-2">
             <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
               <a href="https://wa.me/6287741064490" target="_blank" rel="noopener noreferrer">
-                <Image src="/assets/icon/wa.png" alt="WhatsApp" width={32} height={32} className="w-8 h-8" />
+                <Image src="/assets/Icon/wa.png" alt="WhatsApp" width={32} height={32} className="w-8 h-8" />
               </a>
             </div>
             <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
               <a href="https://www.instagram.com/cpnsindonesia.online/" target="_blank" rel="noopener noreferrer">
-                <Image src="/assets/icon/ig.png" alt="Instagram" width={32} height={32} className="w-8 h-8" />
+                <Image src="/assets/Icon/ig.png" alt="Instagram" width={32} height={32} className="w-8 h-8" />
               </a>
             </div>
             <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
               <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-                <Image src="/assets/Icon/user.png" alt="Twitter" width={32} height={32} className="w-8 h-8" />
+                <Image src="/assets/Icon/tt.png" alt="Twitter" width={32} height={32} className="w-8 h-8" />
               </a>
             </div>
           </div>
