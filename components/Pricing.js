@@ -48,10 +48,7 @@ const Pricing = () => {
                 </div>
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-2xl font-bold text-black-600 dark:text-white">Rp10.000.000</span>
-                  <a
-                    href="#"
-                    className="text-white-500 bg-maroon-500 hover:bg-maroon-600 focus:ring-4 focus:outline-none focus:ring-maroon-300 font-medium rounded-lg text-lg px-5 py-2.5 min-w-[120px] text-center transition-all duration-200"
-                  >
+                  <a href="#" className="text-white-500 bg-maroon-500 hover:bg-maroon-600 focus:ring-4 focus:outline-none focus:ring-maroon-300 font-medium rounded-lg text-lg px-5 py-2.5 min-w-20 text-center transition-all duration-200">
                     Beli
                   </a>
                 </div>

@@ -1,9 +1,5 @@
 import React from "react";
-import Image from "next/image"; // Import Image dari Next.js
-import LogoVPN from "../../public/assets/Logo.svg"; // Jika Anda menggunakan logo ini
-import Facebook from "../../public/assets/Icon/facebook.svg";
-import Twitter from "../../public/assets/Icon/twitter.svg";
-import Instagram from "../../public/assets/Icon/instagram.svg";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -36,13 +32,13 @@ const Footer = () => {
             </div>
             <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
               <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-                <Image src="/assets/icon/tt.png" alt="Twitter" width={32} height={32} className="w-8 h-8" />
+                <Image src="/assets/Icon/user.png" alt="Twitter" width={32} height={32} className="w-8 h-8" />
               </a>
             </div>
           </div>
           <p className="text-gray-400">©{new Date().getFullYear()} - CPNS INDONESIA ONLINE</p>
         </div>
-        
+
         <div className="row-span-2 sm:col-span-2 sm:col-start-9 sm:col-end-11 flex flex-col">
           <p className="text-black-600 mb-4 font-medium text-lg">Menu</p>
           <ul className="text-black-500">
