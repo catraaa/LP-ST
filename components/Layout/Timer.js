@@ -34,25 +34,19 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="fixed ml-4 sm:ml-10 bottom-16 z-50 w-full max-w-xs md:max-w-lg">
+    <div className="fixed ml-4 sm:ml-10 bottom-14 z-50 w-full max-w-xs md:max-w-lg">
       <div className="flex flex-col items-center justify-center p-2 md:p-4">
         {/* Informasi Promo */}
         <div className="flex items-center justify-center mb-4">
-          <span className="bg-maroon-500 text-white-500 px-3 py-1 rounded-full text-xs md:text-sm text-center">
-            Promo 99rb Berakhir Hari Rabu (20 Oktober)
-          </span>
+          <span className="bg-maroon-500 text-white-500 px-3 py-1 rounded-full text-xs md:text-sm text-center">Promo 99rb Berakhir Hari Rabu (20 Oktober)</span>
         </div>
 
         {/* Container Box */}
         <div className="p-2 md:p-4 rounded-lg shadow-lg flex flex-col items-center bg-white-500">
           {/* Harga Promo */}
           <div className="flex items-center justify-between w-full mb-2 md:mb-4">
-            <div className="text-xs md:text-lg font-bold text-gray-400 line-through">
-              Rp 1.000.000
-            </div>
-            <div className="text-xl md:text-3xl font-extrabold text-red-600">
-              Rp 99.000
-            </div>
+            <div className="text-xs md:text-lg font-bold text-gray-400 line-through">Rp 1.000.000</div>
+            <div className="text-xl md:text-3xl font-extrabold text-red-600">Rp 99.000</div>
           </div>
 
           {/* Timer Hitung Mundur dan Tombol */}
@@ -75,9 +69,7 @@ const Timer = () => {
 
             {/* Tombol Aksi di Sebelah Kanan */}
             <a href="https://www.example.com">
-              <button className="bg-maroon-500 text-gray-500 px-4 py-2 rounded-full hover:bg-maroon-600 transition-colors font-bold text-sm md:text-base">
-                Ambil Promo
-              </button>
+              <button className="bg-maroon-500 text-white-500 px-4 py-2 rounded-full hover:bg-maroon-600 transition-colors font-bold text-sm md:text-base">Ambil Promo</button>
             </a>
           </div>
         </div>

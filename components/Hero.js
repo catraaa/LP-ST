@@ -27,10 +27,10 @@ const Hero = ({
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
-    <div className="max-w-screen-xl mt-16 px-8 xl:px-16 mx-auto" id="about">
+    <div className="max-w-screen-xl mt-20 px-8 xl:px-16 mx-auto" id="about">
       <ScrollAnimationWrapper>
         {/* Menggunakan flex-col untuk membuat teks berada di atas dan text-center di mobile */}
-        <motion.div className="flex flex-col sm:flex-row items-center gap-8 py-6 sm:py-16" variants={scrollAnimation}>
+        <motion.div className="flex flex-col sm:flex-row items-center gap-8 pt-20 sm:py-16" variants={scrollAnimation}>
           {/* Bagian Teks */}
           <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left w-full sm:w-1/2">
             <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold text-maroon-500 leading-normal">DIBIMBING DARI NOL!</h1>
@@ -47,7 +47,7 @@ const Hero = ({
 
           {/* Bagian Gambar */}
           <div className="flex justify-center w-full sm:w-1/2">
-            <motion.div className="w-2/3 sm:w-full" variants={scrollAnimation}>
+            <motion.div className="w-1/2 sm:w-2/3 lg:w-7/12" variants={scrollAnimation}>
               <Image src="/assets/w3.png" alt="VPN Illustrasi" quality={100} width={205} height={245} layout="responsive" />
             </motion.div>
           </div>
