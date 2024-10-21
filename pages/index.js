@@ -1,4 +1,3 @@
-import Feature from "../components/Feature";
 import Pricing from "../components/Pricing";
 import Hero from "../components/Hero";
 import SeoHead from "../components/SeoHead";
@@ -11,11 +10,10 @@ import Benefit from "../components/Benefit";
 export default function Home() {
   return (
     <>
-      <SeoHead title="CATBKN Landing Page" />
+      <SeoHead title="CPNSIndonesia.id" />
       <Hero />
       <Galeri />
      <Benefit/>
-      {/* <Feature /> */}
       <Pricing />
       <Testimoni />
       <Faq/>

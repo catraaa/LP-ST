@@ -27,9 +27,8 @@ const Hero = ({
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
-    <div className="max-w-screen-xl mt-20 px-8 xl:px-16 mx-auto" id="about">
+    <div className="max-w-screen-xl mt-16 px-8 xl:px-16 mx-auto" id="about">
       <ScrollAnimationWrapper>
-        {/* Menggunakan flex-col untuk membuat teks berada di atas dan text-center di mobile */}
         <motion.div className="flex flex-col sm:flex-row items-center gap-8 pt-20 sm:py-16" variants={scrollAnimation}>
           {/* Bagian Teks */}
           <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left w-full sm:w-1/2">
@@ -58,9 +57,9 @@ const Hero = ({
       <div className="relative w-full flex">
         <ScrollAnimationWrapper className="rounded-lg w-full grid grid-flow-row sm:grid-flow-row grid-cols-1 sm:grid-cols-3 py-2 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-gray-100 bg-white-500 z-10">
           {listUser.map((listUsers, index) => (
-            <motion.div className="flex items-center justify-center sm:justify-center py-4 sm:py-6 w-8/12 px-4 sm:w-auto mx-auto sm:mx-0" key={index} custom={{ duration: 2 + index }} variants={scrollAnimation}>
-              <div className="flex mx-auto w-40 sm:w-auto">
-                <div className="flex items-center justify-center bg-maroon-100 w-16 h-16 mr-6 rounded-full">
+            <motion.div className="flex items-center justify-start sm:justify-center py-4 sm:py-6 w-full px-4 sm:w-auto mx-auto sm:mx-0" key={index} custom={{ duration: 2 + index }} variants={scrollAnimation}>
+              <div className="flex items-center mx-auto w-full sm:w-auto gap-4">
+                <div className="flex items-center justify-center bg-maroon-100 w-16 h-16 rounded-full">
                   <Image src={listUsers.icon} alt={listUsers.name} width={48} height={48} className="object-cover" />
                 </div>
                 <div className="flex flex-col">

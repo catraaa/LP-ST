@@ -8,7 +8,7 @@ const Pricing = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
   return (
-    <div className="bg-gradient-to-b from-white-300 to-white-500 w-full pt-20 mb-2" id="pricing">
+    <div className=" w-full pt-20 mb-2" id="pricing">
       <div className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full">
           <ScrollAnimationWrapper>
@@ -26,7 +26,7 @@ const Pricing = () => {
           <ScrollAnimationWrapper>
             <motion.div
               variants={scrollAnimation}
-              className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+              className="w-full max-w-sm bg-white border border-gray-100 rounded-lg shadow dark:bg-gray-300 dark:border-gray-400"
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.2 },
