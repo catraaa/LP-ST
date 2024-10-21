@@ -9,8 +9,7 @@ const Timer = () => {
   });
 
   useEffect(() => {
-    // Tetapkan target waktu tetap (misalnya, 20 Oktober 2024, pukul 23:59:59)
-    const targetDate = new Date("2024-10-21T10:40:00");
+    const targetDate = new Date("2024-10-23T23:59:59");
 
     const calculateTimeLeft = () => {
       const difference = targetDate - new Date();
@@ -30,7 +29,7 @@ const Timer = () => {
 
     const timer = setInterval(calculateTimeLeft, 1000);
 
-    return () => clearInterval(timer); // Bersihkan interval saat komponen unmount
+    return () => clearInterval(timer);
   }, []);
 
   return (
