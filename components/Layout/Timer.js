@@ -10,7 +10,7 @@ const Timer = () => {
 
   useEffect(() => {
     // Tetapkan target waktu tetap (misalnya, 20 Oktober 2024, pukul 23:59:59)
-    const targetDate = new Date("2024-10-21T10:40:00");
+    const targetDate = new Date("2024-10-23T23:59:00");
 
     const calculateTimeLeft = () => {
       const difference = targetDate - new Date();
@@ -30,7 +30,7 @@ const Timer = () => {
 
     const timer = setInterval(calculateTimeLeft, 1000);
 
-    return () => clearInterval(timer); // Bersihkan interval saat komponen unmount
+    return () => clearInterval(timer); 
   }, []);
 
   return (
@@ -38,7 +38,7 @@ const Timer = () => {
       <div className="flex flex-col items-center justify-center p-2 md:p-4">
         {/* Informasi Promo */}
         <div className="flex items-center justify-center mb-4">
-          <span className="bg-maroon-500 text-white-500 px-3 py-1 rounded-full text-xs md:text-sm text-center">Promo 99rb Berakhir Hari Rabu (20 Oktober)</span>
+          <span className="bg-maroon-500 text-white-500 px-3 py-1 rounded-full text-xs md:text-sm text-center">Promo 99rb Berakhir Hari Rabu (23 Oktober)</span>
         </div>
 
         {/* Container Box */}
