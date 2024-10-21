@@ -100,10 +100,10 @@ const Header = () => {
             </LinkScroll>
           </ul>
           <div className="col-start-10 col-end-12 font-medium flex justify-end items-center">
-            <Link href="https://www.example.com">
+            <Link href="https://simulasi.catbkn.id/login">
               <a className="text-black-600 mx-2 sm:mx-4 capitalize tracking-wide hover:text-maroon-500 transition-all">  Login</a>
             </Link>
-            <Link href="https://www.example.com" passHref>
+            <Link href="https://daftarpromo.orderonline.id/flashsale99" passHref>
               <a>
                 <ButtonOutline>Daftar</ButtonOutline>
               </a>

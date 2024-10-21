@@ -13,11 +13,8 @@ const Pricing = () => {
         <div className="flex flex-col w-full">
           <ScrollAnimationWrapper>
             <motion.h3 variants={scrollAnimation} className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">
-              Pilih Promo
+              Pilihan <a className="text-maroon-500">Paket</a>
             </motion.h3>
-            <motion.p variants={scrollAnimation} className="leading-normal w-10/12 sm:w-7/12 lg:w-6/12 mx-auto my-2 text-center">
-              blablablablabla.
-            </motion.p>
           </ScrollAnimationWrapper>
         </div>
 

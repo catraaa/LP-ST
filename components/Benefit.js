@@ -10,28 +10,28 @@ const scrollAnimation = {
 const Benefit = () => {
   const benefits = [
     {
-      title: "Materi TWK, TIU, TKP",
-      description: "Penjelasan lengkap dan latihan soal untuk Tes Wawasan Kebangsaan, Tes Intelegensi Umum, dan Tes Karakteristik Pribadi.",
+      title: "PAKET TRYOUT TERUPDATE",
+      description: "Sudah disesuaikan dengan Kisi-Kisi terbaru di setiap tahunnya. Pengerjaan Tryout bisa diulang-ulang untuk mengasah kemampuan kamu menjawab soal seperti ujian aslinya.",
     },
     {
-      title: "Simulasi CAT",
-      description: "Latihan menghadapi tes berbasis komputer dengan simulasi real-time.",
+      title: "ANALIS KEMAMPUAN, PERANKINGAN DAN PEMBAHASAN",
+      description: "Tersedia analis statistik kemampuan pengerjaan tes berupa Skor, Jawaban Benar Salah, Pembahasan serta Perankingan Nasional di setiap Tryout yang kamu kerjakan.",
     },
     {
-      title: "Bimbingan SKB & Wawancara",
-      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+      title: "ZOOM CLASS/LIVE STREAMING",
+      description: "Belajar bareng Pengajar Pilihan dan Kompeten yang siap membimbing kamu selama proses pembelajaran berlangsung. Secret Formula dalam memecahkan soal berbasis trik cepat dan pendalaman konsep.",
     },
     {
-      title: "Bimbingan SKB & Wawancara",
-      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+      title: "GRUP BELAJAR EKSKLUSIF",
+      description: "Diskusi dan sharing bahas soal tes bareng buat ningkatin pemahaman. Silakan curhat kekhawatiranmu kepada kami untuk diberikan solusi yang terbaik.",
     },
     {
-      title: "Bimbingan SKB & Wawancara",
-      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+      title: "VIDEO PEMBAHASAN SOAL",
+      description: "Tersedia pembahasan soal berupa Video. Tonton video untuk memahami mulai dari dasar hingga lanjutan. Dijamin paham deh!",
     },
     {
-      title: "Bimbingan SKB & Wawancara",
-      description: "Persiapan khusus untuk SKB & tahap wawancara agar Anda tampil maksimal.",
+      title: "KOLEKSI EBOOK",
+      description: "Sudah kami siapkan puluhan ebook yang bisa dipelajari dan diakses kapanpun & dimanapun. Flexibel banget kan.",
     },
   ];
 
@@ -44,7 +44,7 @@ const Benefit = () => {
             variants={scrollAnimation}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }} // animasi sekali ketika viewport terlihat
+            viewport={{ once: true }} 
           >
             Kenapa Kami Unggul?
           </motion.h3>
@@ -55,7 +55,7 @@ const Benefit = () => {
       </div>
 
       {/* Grid layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
         {benefits.map((item, index) => (
           <motion.div
             key={index}
@@ -73,8 +73,8 @@ const Benefit = () => {
                 className="w-12 h-12" // Ukuran gambar lebih konsisten
               />
             </div>
-            <h4 className="text-lg font-bold text-center">{item.title}</h4>
-            <p className="text-black-500 text-center flex-grow">{item.description}</p>
+            <h4 className="text-sm font-bold text-center">{item.title}</h4>
+            <p className="text-black-500 text-sm text-center flex-grow">{item.description}</p>
           </motion.div>
         ))}
       </div>

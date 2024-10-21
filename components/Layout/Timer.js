@@ -68,7 +68,7 @@ const Timer = () => {
             </div>
 
             {/* Tombol Aksi di Sebelah Kanan */}
-            <a href="https://www.example.com">
+            <a href="https://daftarpromo.orderonline.id/flashsale99">
               <button className="bg-maroon-500 text-white-500 px-4 py-2 rounded-full hover:bg-maroon-600 transition-colors font-bold text-sm md:text-base">Ambil Promo</button>
             </a>
           </div>
