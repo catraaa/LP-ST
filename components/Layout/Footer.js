@@ -11,7 +11,7 @@ const Footer = () => {
           </div>
 
           <p className="mb-4">
-            <strong className="font-semibold">CPNS INDONESIA ONLINE</strong> adalah e-Learning Persiapan Seleksi CPNS PPPK.
+            <strong className="font-semibold">CPNSINDONESIA.ONLINE</strong> adalah e-Learning Persiapan Seleksi CPNS PPPK.
           </p>
           <div className="flex w-full mt-2 mb-8 -mx-2">
             <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
@@ -22,11 +22,6 @@ const Footer = () => {
             <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
               <a href="https://www.instagram.com/cpnsindonesia.online/" target="_blank" rel="noopener noreferrer">
                 <Image src="/assets/Icon/ig.png" alt="Instagram" width={32} height={32} className="w-8 h-8" />
-              </a>
-            </div>
-            <div className="mx-2 bg-white rounded-full items-center justify-center flex p-2 shadow-md">
-              <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
-                <Image src="/assets/Icon/tt.png" alt="Twitter" width={32} height={32} className="w-8 h-8" />
               </a>
             </div>
           </div>
@@ -60,8 +55,8 @@ const Footer = () => {
         <div className="row-span-2 sm:col-span-2 sm:col-start-11 sm:col-end-13 flex flex-col">
           <p className="text-black-600 mb-4 font-medium text-lg">Partner Kami</p>
           <ul className="text-black-500">
-            <li className="my-2 hover:text-maroon-500 cursor-pointer transition-all">Aku </li>
-            <li className="my-2 hover:text-maroon-500 cursor-pointer transition-all">Kamu </li>
+            <li className="my-2 hover:text-maroon-500 cursor-pointer transition-all">intensif.id</li>
+            <li className="my-2 hover:text-maroon-500 cursor-pointer transition-all">catbkn.id</li>
           </ul>
         </div>
       </div>

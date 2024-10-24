@@ -12,7 +12,7 @@ const Galeri = () => {
     Pembahasan: [{ image: "/assets/pm2.png", title: "Mode Pembahasan" }],
   };
 
-  const scrollAnimation = getScrollAnimation(); // Ambil animasi gulir
+  const scrollAnimation = getScrollAnimation(); 
 
   return (
     <section className="pt-20" id="galeri">
@@ -30,7 +30,7 @@ const Galeri = () => {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`cursor-pointer px-5 py-2 text-sm font-medium transition-colors duration-300 ${activeCategory === category ? "border-b-2 border-maroon-500 text-maroon-500" : "text-black-600"}`}
-                whileHover={{ scale: 1.1 }} // Efek saat hover
+                whileHover={{ scale: 1.1 }} 
                 transition={{ duration: 0.2 }}
               >
                 {category}
@@ -54,7 +54,7 @@ const Galeri = () => {
               }}
             >
               <img src={project.image} alt={project.title} className="object-cover h-85 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-800">{project.title}</h3>
+              <h3 className="text-lg font-semibold">{project.title}</h3>
             </motion.div>
           ))}
         </div>

@@ -8,7 +8,7 @@ const Timer = () => {
   });
 
   useEffect(() => {
-    // Tetapkan target waktu tetap (misalnya, 25 Oktober 2024, pukul 18:59:59)
+    // Target waktu tetap 
     const targetDate = new Date("2024-10-27T18:59:59");
 
     const calculateTimeLeft = () => {
