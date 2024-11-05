@@ -1,66 +1,67 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import getScrollAnimation from "../utils/getScrollAnimation";
-import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
+  import React from "react";
+  import Slider from "react-slick";
+  import Image from "next/image";
+  import "slick-carousel/slick/slick.css";
+  import "slick-carousel/slick/slick-theme.css";
 
-const Galeri = () => {
-  const [activeCategory, setActiveCategory] = useState("Laptop");
+  const Galeri = () => {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3, // Menampilkan 3 gambar per slide
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      prevArrow: <PreviousArrow />,
+      nextArrow: <NextArrow />,
+    };
 
-  const projects = {
-    Laptop: [{ image: "/assets/lp2.png", title: "Mode Laptop/Komputer" }],
-    Mobile: [{ image: "/assets/hp2.png", title: "Mode Mobile" }],
-    Pembahasan: [{ image: "/assets/pm2.png", title: "Mode Pembahasan" }],
+    const images = [
+      { src: "/assets/g1.jpg", caption: "Gambar 1 - Proyek A" },
+      { src: "/assets/g2.jpg", caption: "Gambar 2 - Proyek B" },
+      { src: "/assets/bg.jpg", caption: "Gambar 3 - Proyek C" },
+      { src: "/assets/Icon/wa.png", caption: "Gambar 4 - Ikon WA" },
+      { src: "/assets/Icon/wa.png", caption: "Gambar 5 - Ikon WA" },
+    ];
+
+    return (
+      <div className="pt-20 md:p-20" id="galeri">
+        <h3 className="text-center text-2xl md:text-3xl pb-10 font-semibold text-black-600">Galeri Proyek</h3>
+        <Slider {...settings} className="rounded-lg">
+          {images.map((image, index) => (
+            <div key={index} className="p-2">
+              <div className="relative h-64 md:h-80">
+                <Image src={image.src} alt={`Image ${index + 1}`} layout="fill" objectFit="cover" className="rounded-lg" />
+                <div className="absolute bottom-0 w-full bg-black/50 text-white text-center py-2">{image.caption}</div>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    );
   };
 
-  const scrollAnimation = getScrollAnimation(); 
-
-  return (
-    <section className="pt-20" id="galeri">
-      <div className="container mx-auto text-center">
-        <ScrollAnimationWrapper>
-          <motion.h3 variants={scrollAnimation} className="text-xl sm:text-2xl lg:text-3xl font-medium text-black-600 leading-normal w-9/12 sm: lg:w-4/12 mx-auto">
-            Tampilan <a className="font-bold text-maroon-500">TryOut</a>{" "}
-          </motion.h3>
-        </ScrollAnimationWrapper>
-
-        <ScrollAnimationWrapper>
-          <motion.div className="flex justify-center space-x-6 mb-4 mt-4" variants={scrollAnimation} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.1 }}>
-            {["Laptop", "Mobile", "Pembahasan"].map((category) => (
-              <motion.span
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`cursor-pointer px-5 py-2 text-sm font-medium transition-colors duration-300 ${activeCategory === category ? "border-b-2 border-maroon-500 text-maroon-500" : "text-black-600"}`}
-                whileHover={{ scale: 1.1 }} 
-                transition={{ duration: 0.2 }}
-              >
-                {category}
-              </motion.span>
-            ))}
-          </motion.div>
-        </ScrollAnimationWrapper>
-
-        {/* Grid Gambar */}
-        <div className="flex flex-wrap justify-center gap-8 px-2 text-center">
-          {projects[activeCategory].map((project, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col items-center"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-              }}
-            >
-              <img src={project.image} alt={project.title} className="object-cover h-85 mb-4" />
-              <h3 className="text-lg font-semibold">{project.title}</h3>
-            </motion.div>
-          ))}
-        </div>
+  // Tombol Previous
+  const PreviousArrow = ({ onClick }) => (
+    <div className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
+      <div className="bg-white/50 hover:bg-white/80 rounded-full p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
       </div>
-    </section>
+    </div>
   );
-};
 
-export default Galeri;
+  // Tombol Next
+  const NextArrow = ({ onClick }) => (
+    <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
+      <div className="bg-white/50 hover:bg-white/80 rounded-full p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </div>
+  );
+
+  export default Galeri;

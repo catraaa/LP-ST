@@ -8,10 +8,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="fixed top-0 w-full z-50"> {/* Pastikan z-index di sini */}
+      <div className="fixed top-0 w-full z-50"> 
         <Timer />
       </div>
-      <div className="relative z-10"> {/* Tambahkan z-index lebih tinggi untuk konten */}
+      <div className="relative z-10"> 
         {children}
       </div>
       <Footer />

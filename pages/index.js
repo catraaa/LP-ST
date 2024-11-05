@@ -2,22 +2,20 @@ import Pricing from "../components/Pricing";
 import Hero from "../components/Hero";
 import SeoHead from "../components/SeoHead";
 import Galeri from "../components/Galeri";
-import Faq from "../components/Faq";
-import Testimoni from "../components/Testimoni";
 import Unggul from "../components/Unggul";
+import Maps from "../components/Maps";
 import Benefit from "../components/Benefit";
 
 export default function Home() {
   return (
     <>
-      <SeoHead title="CPNSIndonesia.id" />
+      <SeoHead title="Sarana-Teknik-Bali" />
       <Hero />
-      <Galeri />
-     <Benefit/>
+      <Benefit />
       <Pricing />
-      <Testimoni />
-      <Faq/>
-      <Unggul/>
+      <Galeri />
+      <Maps />
+      <Unggul />
     </>
   );
 }

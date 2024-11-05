@@ -37,7 +37,10 @@ module.exports = {
         600: "#EEEEEE",
       },
       maroon: {
-        500: "#B7393D",
+        500: "#E61D4C",
+      },
+      hijau: {
+        500: "#25D366",
       },
     },
     extend: {},

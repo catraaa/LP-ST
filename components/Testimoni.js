@@ -96,7 +96,7 @@ const Testimoni = ({
   const [sliderRef, setSliderRef] = useState(null);
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
-  // Definisikan animasi untuk setiap testimoni
+  // Animasi untuk setiap testimoni
   const testimonialAnimation = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },

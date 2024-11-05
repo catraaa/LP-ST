@@ -3,16 +3,16 @@ import { useRouter } from "next/router";
 
 // Default value for some meta data
 const defaultMeta = {
-  title: "CPNS INDONESIA ONLINE",
-  siteName: "CPNS INDONESIA ONLINE",
-  description: "CPNS INDONESIA ONLINE",
+  title: "SARANA TEKNIK BALI",
+  siteName: "SARANA TEKNIK BALI",
+  description: "SARANA TEKNIK BALI",
   // change base url of your web (without '/' at the end)
   url: " ",
   type: "website",
   robots: "follow, index",
   // change with url of your image (recommended dimension = 1.91:1)
   // used in twitter, facebook, etc. card when link copied in tweet/status
-  image: "/assets/logo2.png",
+  image: "/assets/logo1.png",
   author: "Beni Tiyas Kristanti",
 };
 
@@ -76,7 +76,7 @@ const SeoHead = (props) => {
       ))}
       {/* Windows 8 app icon */}
       <meta name="msapplication-TileColor" content="#F53838" />
-      <meta name="msapplication-TileImage" content="/assets/logo2.png" />
+      <meta name="msapplication-TileImage" content="/assets/logo1.png" />
       {/* Accent color on supported browser */}
       <meta name="theme-color" content="#F53838" />
     </Head>
@@ -88,7 +88,7 @@ const favicons = [
   {
     rel: "apple-touch-icon",
     sizes: "57x57",
-    href: "/assets/logo2.png",
+    href: "/assets/logo1.png",
   },
   {
     rel: "apple-touch-icon",
