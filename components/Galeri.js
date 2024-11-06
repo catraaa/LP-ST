@@ -18,11 +18,26 @@ const Galeri = () => {
   };
 
   const images = [
-    { src: "/assets/g1.jpg", caption: "Gambar 1 - Proyek A" },
-    { src: "/assets/g2.jpg", caption: "Gambar 2 - Proyek B" },
-    { src: "/assets/bg.jpg", caption: "Gambar 3 - Proyek C" },
-    { src: "/assets/Icon/wa.png", caption: "Gambar 4 - Ikon WA" },
-    { src: "/assets/Icon/wa.png", caption: "Gambar 5 - Ikon WA" },
+    { src: "/assets/g1.jpg", caption: "Blower 12 inch" },
+    { src: "/assets/g2.jpg", caption: "Proyek Compressor cat dan texture" },
+    { src: "/assets/g3.jpg", caption: "Proyek Cutting beton" },
+    { src: "/assets/g4.jpg", caption: "Compressor cat dan texture" },
+    { src: "/assets/g6 (2).jpg", caption: "Proyek Genset" },
+    { src: "/assets/g5.jpg", caption: "Proyek Jack drill beton/dinding" },
+    { src: "/assets/g7.jpg", caption: "Proyek Jack hammer" },
+    { src: "/assets/g8.jpg", caption: "Proyek Pompa air" },
+    { src: "/assets/g9.jpg", caption: "Proyek Power trowel" },
+    { src: "/assets/g10.jpg", caption: "Proyek Satmper kodok" },
+    { src: "/assets/g11.jpg", caption: "Proyek Stamper pemadat tanah" },
+    { src: "/assets/g12.jpg", caption: "Proyek Vibrator cor" },
+    { src: "/assets/g13.jpg", caption: "Proyek Coring beton" },
+    { src: "/assets/g14.jpg", caption: "Proyek Blower 12 inch" },
+    { src: "/assets/g15.jpg", caption: "Proyek Cutting beton" },
+    { src: "/assets/g16.jpg", caption: "Proyek Jack drill beton/dinding" },
+    { src: "/assets/g6.jpg", caption: "Proyek Genset" },
+    { src: "/assets/g17.jpg", caption: "Proyek Jack hammer" },
+    { src: "/assets/g18.jpg", caption: "Proyek Pompa air" },
+    { src: "/assets/g19.jpg", caption: "Proyek Stamper kodok" },
   ];
 
   return (

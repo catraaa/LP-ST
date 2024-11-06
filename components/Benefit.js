@@ -66,7 +66,7 @@ const Benefit = () => {
         {/* Kolom Kanan: Tentang Perusahaan */}
         <div className="bg-maroon-500 p-4 rounded-lg flex flex-col">
           <h3 className="text-3xl font-medium mb-4 mt-8 text-white-500">SEWA ALAT BANGUNAN BALI - CV SARANA TEKNIK</h3>
-          <p className="text-sm leading-relaxed text-white-500 mt-2">
+          <p className="text-sm leading-relaxed text-white-500 mt-2 text-justify">
             Sejak didirikan pada tahun 2019, CV Sarana Teknik telah menjadi pemain utama dalam industri penyewaan alat bangunan/kontraktor. Kami menawarkan berbagai jenis alat sebagai berikut:
           </p>
 
@@ -85,7 +85,7 @@ const Benefit = () => {
             <li>Vakum cleaner</li>
             <li>Vibrator cor, pemadat cor</li>
           </ul>
-          <p className="text-sm leading-relaxed text-white-500 mt-4">Dengan tim manajemen yang solid, dukungan administrasi yang efisien, serta operator dan mekanik yang berpengalaman, kami siap memenuhi kebutuhan Anda!</p>
+          <p className="text-sm text-justify leading-relaxed text-white-500 mt-4">Dengan tim manajemen yang solid, dukungan administrasi yang efisien, serta operator dan mekanik yang berpengalaman, kami siap memenuhi kebutuhan Anda!</p>
         </div>
       </div>
     </div>
