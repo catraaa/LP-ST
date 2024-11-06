@@ -20,10 +20,10 @@ const Hero = () => {
           CV Sarana Teknik rental sewa alat bangunan Bali Termurah & Terlengkap. Melayani persewaan alat berbagai jenis dengan biaya terjangkau.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/6281328409179" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/6285608360196" target="_blank" rel="noopener noreferrer">
             <ButtonPrimary className="px-6 py-3 text-lg sm:text-xl">Konsultasi</ButtonPrimary>
           </a>
-          <a href="#tentangKami">
+          <a href="#pricing">
             <ButtonPrimary className="px-6 py-3 text-lg sm:text-xl">Katalog</ButtonPrimary>
           </a>
         </div>
