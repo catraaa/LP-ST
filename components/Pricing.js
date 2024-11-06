@@ -14,72 +14,37 @@ const Pricing = () => {
       title: "Stamper Pemadat Tanah",
       description1: "Rp.10.000.00/jam.",
       description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
+      whatsappLink: "https://wa.me/your-number-here", 
     },
     {
       image: "/assets/stemper.jpg",
       title: "Stamper Pemadat Tanah",
       description1: "Rp.10.000.00/jam.",
       description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
+      whatsappLink: "https://wa.me/your-number-here", 
     },
     {
       image: "/assets/stemper.jpg",
       title: "Stamper Pemadat Tanah",
       description1: "Rp.10.000.00/jam.",
       description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
+      whatsappLink: "https://wa.me/your-number-here", 
     },
     {
       image: "/assets/stemper.jpg",
       title: "Stamper Pemadat Tanah",
       description1: "Rp.10.000.00/jam.",
       description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
+      whatsappLink: "https://wa.me/your-number-here", 
     },
     {
       image: "/assets/stemper.jpg",
       title: "Stamper Pemadat Tanah",
       description1: "Rp.10.000.00/jam.",
       description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
+      whatsappLink: "https://wa.me/your-number-here", 
     },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
-    },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
-    },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
-    },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
-    },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", // Ganti dengan nomor WhatsApp Anda
-    },
-    // Tambahkan proyek lainnya di sini jika diperlukan
+
   ];
 
   return (
