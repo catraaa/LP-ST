@@ -12,39 +12,43 @@ const Pricing = () => {
     {
       image: "/assets/stemper.jpg",
       title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
+      description2: "Rp.10.000.00/jam.",
+      description3: "Rp.10.000.00/hari.",
+      whatsappLink: "https://wa.me/6285608360196",
+    },
+    {
+      image: "/assets/kodok.jpg",
+      title: "Stamper Kodok",
+      description1: "Alat atau mesin untuk meratakan & memadatkan permukaan paving/aspal.",
       description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", 
+      description3: "Rp.10.000.00/hari.",
+      whatsappLink: "https://wa.me/6285608360196",
+    },
+    {
+      image: "/assets/jh.png",
+      title: "Jack hammer",
+      description1: "Jack hammer beton ph65 menghancurkan permukaan keras beton, aspal, dan batu.",
+      description2: "Rp.150.000/hari.",
+      description3: "Rp.900.000/minggu.",
+      description4: "Rp.2.750.000/bulan.",
+      whatsappLink: "https://wa.me/6285608360196",
+    },
+    {
+      image: "/assets/blower.png",
+      title: "Blower 12 inch",
+      description1: "Alat hisap debu dan kotoran dengan diameter saluran hisap/output 12 inci.",
+      description2: "Rp.150.000/hari.",
+      description3: "Rp.900.000/minggu.",
+      description4: "Rp.2.750.000/bulan.",
+      whatsappLink: "https://wa.me/6285608360196",
     },
     {
       image: "/assets/stemper.jpg",
       title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", 
+      description2: "Rp.10.000.00/jam.",
+      description3: "Rp.10.000.00/hari.",
+      whatsappLink: "https://wa.me/6285608360196",
     },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", 
-    },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", 
-    },
-    {
-      image: "/assets/stemper.jpg",
-      title: "Stamper Pemadat Tanah",
-      description1: "Rp.10.000.00/jam.",
-      description2: "Rp.10.000.00/hari.",
-      whatsappLink: "https://wa.me/your-number-here", 
-    },
-
   ];
 
   return (
@@ -74,16 +78,18 @@ const Pricing = () => {
               <Image
                 src={project.image}
                 alt="Promo Image"
-                width={300} // Ukuran lebar gambar
-                height={200} // Ukuran tinggi gambar
+                width={300}
+                height={200}
                 quality={75}
                 priority
                 className="w-full h-auto rounded-t-lg" // Gambar responsif
               />
               <div className="px-5 pb-5">
-                <h5 className="text-lg font-semibold tracking-tight dark:text-white text-center">{project.title}</h5>
-                <p className="text-xs text-black-600 text-center">{project.description1}</p>
+                <h5 className="text-l font-semibold tracking-tight dark:text-white text-center">{project.title}</h5>
+                <p className="text-xs text-gray-200 text-centertext-xs mb-2">{project.description1}</p>
                 <p className="text-xs text-black-600 text-center">{project.description2}</p>
+                <p className="text-xs text-black-600 text-center">{project.description3}</p>
+                <p className="text-xs text-black-600 text-center">{project.description4}</p>
                 <a href={project.whatsappLink} className="mt-4 inline-block w-3/4 mx-auto px-4 py-2 text-sm font-medium text-white-500 bg-maroon-500 rounded hover:bg-maroon-600 transition" target="_blank" rel="noopener noreferrer">
                   Sewa
                 </a>
