@@ -47,9 +47,9 @@ const Hero = () => {
         }
 
         /* Responsiveness for different screen sizes */
-        @media (max-width: 640px) {
+        @media (max-width: 600px) {
           .animate-typing {
-            width: 12ch; /* Adjust width for mobile */
+            width: 6ch; /* Adjust width for mobile */
           }
         }
         @media (min-width: 641px) and (max-width: 768px) {

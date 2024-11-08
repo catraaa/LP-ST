@@ -13,9 +13,9 @@ const Pricing = () => {
       image: "/assets/stamper.jpg",
       title: "Stamper Pemadat Tanah",
       description1: "Alat yang digunakan untuk memadatkan tanah, aspal, dan susunan batu.",
-      description2: "Rp250.000/jam",
-      description3: "Rp1.450.000/hari",
-      description4: "Rp4.500.00/hari",
+      description2: "Rp250.000/hari",
+      description3: "Rp1.450.000/minggu",
+      description4: "Rp4.500.00/bulan",
       whatsappLink: "https://wa.me/6283856567166",
     },
     {

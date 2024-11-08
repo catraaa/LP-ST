@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Logo dan Deskripsi */}
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start">
           <div className="flex flex-nowrap mb-2">
-            <Image src="/assets/logo3.png" alt="Logo SARANA TEKNIK" className="h-9 w-auto" width={104} height={60} />
+            <Image src="/assets/logo6.png" alt="Logo SARANA TEKNIK" className="h-9 w-auto" width={104} height={60} />
           </div>
           <p className="mb-1 text-sm md:text-base">
             <strong className="font-semibold">CV Sarana Teknik Bali</strong> - Terdiri dari banyak tenaga ahli profesional dalam bidang kontruksi. Kami selalu berusaha menjadi yang terbaik dan selalu menjadi
