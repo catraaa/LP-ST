@@ -34,7 +34,7 @@ const Hero = () => {
             width: 0;
           }
           100% {
-            width: 90%;
+            width: 95%;
           }
         }
         .animate-typing {
