@@ -8,22 +8,22 @@ const Footer = () => {
         {/* Logo dan Deskripsi */}
         <div className="row-span-2 sm:col-span-4 col-start-1 col-end-4 sm:col-end-5 flex flex-col items-start">
           <div className="flex flex-nowrap mb-2">
-            <Image src="/assets/logo1.png" alt="Logo SARANA TEKNIK" className="h-9 w-auto" width={104} height={60} />
+            <Image src="/assets/logo3.png" alt="Logo SARANA TEKNIK" className="h-9 w-auto" width={104} height={60} />
           </div>
           <p className="mb-1 text-sm md:text-base">
-            <strong className="font-semibold">CV Sarana Teknik</strong> Sewa alat - proyek bangunan di Bali. Terdiri dari banyak tenaga ahli profesional dalam bidang kontruksi. Kami selalu berusaha menjadi yang terbaik dan selalu menjadi
+            <strong className="font-semibold">CV Sarana Teknik Bali</strong> - Terdiri dari banyak tenaga ahli profesional dalam bidang kontruksi. Kami selalu berusaha menjadi yang terbaik dan selalu menjadi
             mitra kerja yang terpercaya.
           </p>
 
           {/* Ikon Media Sosial */}
           <div className="flex w-full mt-2 mb-2 space-x-4">
             <div className="bg-white rounded-full items-center justify-center flex p-2 shadow-md">
-              <a href="https://wa.me/6285608360196" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/6283856567166" target="_blank" rel="noopener noreferrer">
                 <Image src="/assets/Icon/wa.png" alt="WhatsApp" width={34} height={34} className="w-8 h-8" />
               </a>
             </div>
             <div className="bg-white rounded-full items-center justify-center flex p-2 shadow-md">
-              <a href="https://www.instagram.com/cv.sarana_teknik" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/cv.sarana_teknik?igsh=MW9lcjBmbnZvNzh4dg==" target="_blank" rel="noopener noreferrer">
                 <Image src="/assets/Icon/ig.png" alt="Instagram" width={29} height={29} className="w-8 h-8" />
               </a>
             </div>
@@ -60,7 +60,6 @@ const Footer = () => {
         {/* Daftar Produk */}
         <div className="row-span-2 sm:col-span-4 sm:col-start-9 sm:col-end-16 flex flex-col">
           <p className="text-black-600 mb-2 font-medium text-lg">Produk Kami</p>
-          {/* Menggunakan grid 1 kolom di mobile dan 2 kolom di layar lebih besar */}
           <div className="flex gap-4 text-black-500 text-sm md:text-base">
             <ul className="list-disc list-inside">
               <li className="my-1 hover:text-maroon-500 cursor-pointer transition-all whitespace-nowrap">Blower 12 inch | Jack hammer</li>

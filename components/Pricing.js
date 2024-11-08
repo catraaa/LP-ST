@@ -136,7 +136,7 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="w-full pt-20 mb-2" id="pricing">
+    <div className="w-full pt-24 mb-2" id="pricing">
       <div className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full">
           <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">

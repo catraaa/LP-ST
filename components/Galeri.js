@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Galeri = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
@@ -60,7 +60,7 @@ const Galeri = () => {
 // Tombol Previous
 const PreviousArrow = ({ onClick }) => (
   <div className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
-    <div className="bg-white/50 hover:bg-white/80 rounded-full p-2">
+    <div className="bg-white-500 hover:bg-white/80 rounded-full p-2">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
       </svg>
@@ -71,7 +71,7 @@ const PreviousArrow = ({ onClick }) => (
 // Tombol Next
 const NextArrow = ({ onClick }) => (
   <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
-    <div className="bg-white/50 hover:bg-white/80 rounded-full p-2">
+    <div className="bg-white-500 hover:bg-white/80 rounded-full p-2">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
       </svg>

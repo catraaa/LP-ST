@@ -15,9 +15,9 @@ const Header = () => {
   return (
     <>
       <header className={"fixed top-0 w-full  z-20 bg-white-500 transition-all " + (scrollActive ? " shadow-md pt-0" : " pt-4")}>
-        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
+        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-2 sm:py-2">
           <div className=" flex items-center">
-            <img src="/assets/logo1.png" alt="Logo" className="w-30 h-12" />
+            <img src="/assets/logo3.png" alt="Logo" className="w-34 h-14" />
           </div>
           <ul className="hidden lg:flex col-start-4 col-end-8 text-black-500  items-center">
             <LinkScroll

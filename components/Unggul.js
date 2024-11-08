@@ -6,15 +6,19 @@ import Image from "next/image";
 const logos = [
   { id: 1, src: "/assets/waskita.png" },
   { id: 2, src: "/assets/Marga1.jpg" },
+  { id: 1, src: "/assets/grand.png" },
+  { id: 2, src: "/assets/galeria.jpg" },
+  { id: 1, src: "/assets/uni.jpeg" },
   { id: 1, src: "/assets/waskita.png" },
   { id: 2, src: "/assets/Marga1.jpg" },
+  { id: 1, src: "/assets/grand.png" },
+  { id: 2, src: "/assets/galeria.jpg" },
+  { id: 1, src: "/assets/uni.jpeg" },
   { id: 1, src: "/assets/waskita.png" },
   { id: 2, src: "/assets/Marga1.jpg" },
-  { id: 1, src: "/assets/waskita.png" },
-  { id: 2, src: "/assets/Marga1.jpg" },
-  { id: 1, src: "/assets/waskita.png" },
-  { id: 2, src: "/assets/Marga1.jpg" },
-
+  { id: 1, src: "/assets/grand.png" },
+  { id: 2, src: "/assets/galeria.jpg" },
+  { id: 1, src: "/assets/uni.jpeg" },
 ];
 
 const Unggul = () => {
