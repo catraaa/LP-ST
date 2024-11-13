@@ -16,9 +16,9 @@ const Hero = () => {
       {/* Content Section */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white-500 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-white">CV SARANA TEKNIK BALI</h1>
-        <p className="text-lg sm:text-xl md:text-2xl mt-4 max-w-4xl sm:max-w-5xl lg:max-w-6xl text-white-500">
-          CV Sarana Teknik Bali rental sewa alat sipil/contractor Bali Termurah & Terlengkap. Melayani jasa coring beton dengan biaya terjangkau.
-        </p>
+        <h className="text-lg sm:text-xl md:text-2xl mt-4 max-w-4xl sm:max-w-5xl lg:max-w-6xl text-white-500">
+          CV Sarana Teknik Bali Rental Sewa Alat Sipil/Contractor Bali Termurah & Terlengkap. Melayani Jasa Coring Beton Dengan Biaya Terjangkau.
+        </h>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <a href="https://wa.me/6283856567166" target="_blank" rel="noopener noreferrer">
             <ButtonPrimary className="px-6 py-3 text-lg sm:text-xl">Konsultasi</ButtonPrimary>

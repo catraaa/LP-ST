@@ -67,7 +67,7 @@ const Benefit = () => {
         <div className="bg-maroon-500 p-4 rounded-lg flex flex-col">
           <h3 className="text-2xl font-medium mb-4 mt-8 text-white-500">CV SARANA TEKNIK BALI - SEWA ALAT SIPIL/CONTRACTOR & JASA CORING BETON</h3>
           <p className="text-sm leading-relaxed text-white-500 mt-2 text-justify">
-            Sejak didirikan pada tahun 2019, CV Sarana Teknik telah menjadi pemain utama dalam industri penyewaan alat bangunan/kontraktor. Kami menawarkan berbagai jenis alat sebagai berikut:
+            CV Sarana Teknik Bali telah bergerak dalam industri penyewaan alat bangunan/kontraktor. Kami menawarkan berbagai jenis alat sebagai berikut:
           </p>
 
           <ul className="list-disc pl-6 text-sm leading-relaxed text-white-500 mt-2">
