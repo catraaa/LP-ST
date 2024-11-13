@@ -9,7 +9,7 @@ import Benefit from "../components/Benefit";
 export default function Home() {
   return (
     <>
-      <SeoHead title="Sarana-Teknik-Bali" />
+      <SeoHead title="CV Sarana Teknik Bali" />
       <Hero />
       <Benefit />
       <Pricing />
