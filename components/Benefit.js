@@ -16,7 +16,7 @@ const Benefit = () => {
     },
     {
       title: "TEPAT WAKTU",
-      description: "Layanan kami selalu mengutamakan ketepatan dan kecepatan, memastikan setiap kebutuhan Anda terpenuhi tanpa penundaan",
+      description: "Layanan kami mengutamakan ketepatan dan kecepatan, memastikan setiap kebutuhan terpenuhi tanpa penundaan",
       image: "/assets/i2.png",
     },
     {
@@ -26,7 +26,7 @@ const Benefit = () => {
     },
     {
       title: "SIAP PAKAI",
-      description: "Kepuasan Anda adalah prioritas kami. Setiap alat sipil atau contractor yang dikirim selalu melewati pengecekan teliti demi performa optimal.",
+      description: "Kepuasan Anda adalah prioritas kami. Setiap alat sipil yang dikirim selalu melewati pengecekan teliti demi performa optimal.",
       image: "/assets/i4.png",
     },
   ];
