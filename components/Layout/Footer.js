@@ -11,8 +11,7 @@ const Footer = () => {
             <Image src="/assets/logo6.png" alt="Logo SARANA TEKNIK" className="h-9 w-auto" width={104} height={60} />
           </div>
           <p className="mb-1 text-sm md:text-base">
-            <strong className="font-semibold">CV Sarana Teknik Bali</strong> - Terdiri dari banyak tenaga ahli profesional dalam bidang kontruksi. Kami selalu berusaha menjadi yang terbaik dan selalu menjadi
-            mitra kerja yang terpercaya.
+            <strong className="font-semibold">CV Sarana Teknik Bali</strong> - Terdiri dari banyak tenaga ahli profesional dalam bidang kontruksi. Kami selalu berusaha menjadi yang terbaik dan selalu menjadi mitra kerja yang terpercaya.
           </p>
 
           {/* Ikon Media Sosial */}
@@ -40,19 +39,19 @@ const Footer = () => {
           <p className="text-black-600 mb-2 font-medium text-lg">Menu</p>
           <ul className="text-black-500 text-sm md:text-base">
             <li className="my-1 hover:text-maroon-500 cursor-pointer transition-all">
-              <a href="#about">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li className="my-1 hover:text-maroon-500 cursor-pointer transition-all">
-              <a href="#galeri">Tentang</a>
+              <a href="#benefit">Tentang</a>
             </li>
             <li className="my-1 hover:text-maroon-500 cursor-pointer transition-all">
-              <a href="#benefit">Katalog</a>
+              <a href="#pricing">Katalog</a>
             </li>
             <li className="my-1 hover:text-maroon-500 cursor-pointer transition-all">
-              <a href="#pricing">Galeri</a>
+              <a href="#galeri">Galeri</a>
             </li>
             <li className="my-1 hover:text-maroon-500 cursor-pointer transition-all">
-              <a href="#testimoni">Lokasi</a>
+              <a href="#map">Lokasi</a>
             </li>
           </ul>
         </div>

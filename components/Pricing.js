@@ -139,9 +139,10 @@ const Pricing = () => {
     <div className="w-full pt-24 mb-2" id="pricing">
       <div className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex flex-col w-full text-center justify-center">
         <div className="flex flex-col w-full">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">
-            Katalog Unit <a className="text-maroon-500">Rental Alat</a>
-          </h3>
+          {/* Menggunakan h1 untuk judul utama */}
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-black-600 leading-relaxed">
+            Katalog Unit <a className="text-maroon-500">Rental Alat Sipil Bali</a>
+          </h1>
         </div>
 
         {/* Pricing Box */}
@@ -161,16 +162,17 @@ const Pricing = () => {
             >
               <Image
                 src={project.image}
-                alt="Promo Image"
-                width={300}
+                alt={`Gambar ${project.title} - ${project.description1}`} // Menambahkan alt text yang deskriptif
+                width={320}
                 height={200}
                 quality={75}
                 priority
                 className="w-full h-auto rounded-t-lg" // Gambar responsif
               />
               <div className="px-5 pb-5">
-                <h5 className="text-l font-semibold tracking-tight dark:text-white text-center">{project.title}</h5>
-                <p className="text-xs text-gray-200 text-centertext-xs mb-2">{project.description1}</p>
+                {/* Menggunakan h2 untuk judul proyek */}
+                <h2 className="text-l font-semibold tracking-tight dark:text-white text-center">{project.title}</h2>
+                <p className="text-xs text-gray-200 text-center mb-2">{project.description1}</p>
                 <p className="text-xs text-black-600 text-center">{project.description2}</p>
                 <p className="text-xs text-black-600 text-center">{project.description3}</p>
                 <p className="text-xs text-black-600 text-center">{project.description4}</p>

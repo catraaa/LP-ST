@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import ScrollAnimationWrapper from "./Layout/ScrollAnimationWrapper";
 
@@ -12,7 +11,7 @@ const Benefit = () => {
   const benefits = [
     {
       title: "HARGA HEMAT",
-      description: "Bandingkan dan hemat! Kami menawarkan harga kompetitif untuk sewa per jam atau per hari yang ramah di kantong.",
+      description: "Bandingkan dan hemat! Kami menawarkan harga kompetitif untuk sewa per jam, per hari, dan per bulan yang ramah di kantong.",
       image: "/assets/i1.png",
     },
     {
@@ -22,12 +21,12 @@ const Benefit = () => {
     },
     {
       title: "KUALITAS UNGGUL",
-      description: "Dengan peralatan unggul dan tim ahli, kami siap memberikan layanan yang terpercaya dan berstandar tinggi.",
+      description: "Dengan peralatan unggul dan tim ahli bidang sipil, kami siap memberikan layanan yang terpercaya dan berstandar tinggi.",
       image: "/assets/i3.png",
     },
     {
       title: "SIAP PAKAI",
-      description: "Kepuasan Anda adalah prioritas kami. Setiap alat berat yang dikirim selalu melewati pengecekan teliti demi performa optimal.",
+      description: "Kepuasan Anda adalah prioritas kami. Setiap alat sipil atau contractor yang dikirim selalu melewati pengecekan teliti demi performa optimal.",
       image: "/assets/i4.png",
     },
   ];
@@ -55,7 +54,8 @@ const Benefit = () => {
                 whileHover={{ scale: 1.02, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }}
                 className="bg-white rounded-lg p-6 flex flex-col justify-between items-center transition-all duration-300 ease-in-out text-black"
               >
-                <img src={item.image} alt={item.title} className="w-12 h-14 mb-2" />
+                {/* Image with alt text */}
+                <img src={item.image} alt={`Benefit: ${item.title}`} className="w-12 h-14 mb-2" />
                 <h4 className="text-lg font-bold text-center">{item.title}</h4>
                 <p className="text-center text-sm">{item.description}</p>
               </motion.div>
@@ -66,10 +66,9 @@ const Benefit = () => {
         {/* Kolom Kanan: Tentang Perusahaan */}
         <div className="bg-maroon-500 p-4 rounded-lg flex flex-col">
           <h3 className="text-2xl font-medium mb-4 mt-8 text-white-500">CV SARANA TEKNIK BALI - SEWA ALAT SIPIL/CONTRACTOR & JASA CORING BETON</h3>
-          <p className="text-sm leading-relaxed text-white-500 mt-2 text-justify">
-            CV Sarana Teknik Bali telah bergerak dalam industri penyewaan alat bangunan/kontraktor. Kami menawarkan berbagai jenis alat sebagai berikut:
-          </p>
+          <h4 className="text-sm leading-relaxed text-white-500 mt-2 text-justify">CV Sarana Teknik Bali telah bergerak dalam industri penyewaan alat bangunan/kontraktor. Kami menawarkan berbagai jenis alat sebagai berikut:</h4>
 
+          {/* Daftar alat */}
           <ul className="list-disc pl-6 text-sm leading-relaxed text-white-500 mt-2">
             <li>Blower 12 inch / hisap debu</li>
             <li>Compressor cat & texture</li>
@@ -85,6 +84,7 @@ const Benefit = () => {
             <li>Vakum cleaner</li>
             <li>Vibrator cor, pemadat cor</li>
           </ul>
+
           <p className="text-sm text-justify leading-relaxed text-white-500 mt-4">Dengan tim manajemen yang solid, dukungan administrasi yang efisien, serta operator dan mekanik yang berpengalaman, kami siap memenuhi kebutuhan Anda!</p>
         </div>
       </div>
