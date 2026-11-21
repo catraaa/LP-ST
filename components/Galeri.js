@@ -225,7 +225,7 @@ const Galeri = () => {
                 />
 
                 {/* CAPTION */}
-                <div className="absolute bottom-0 w-full rounded-b-lg bg-maroon-500 px-3 py-2 text-center text-white">
+                <div className="absolute bottom-0 w-full rounded-b-lg bg-maroon-500 px-3 py-2 text-center text-white-500">
                   {image.caption}
                 </div>
 
