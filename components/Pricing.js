@@ -203,7 +203,7 @@ export default function Pricing() {
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Hari
                             </span>
-                            <span className="min-w-0 whitespace-nowrap text-right text-[12px] font-bold leading-tight text-gray-800 sm:text-sm">
+                            <span className="min-w-0 whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_hari)}
                             </span>
                           </div>
@@ -212,7 +212,7 @@ export default function Pricing() {
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Minggu
                             </span>
-                            <span className="min-w-0 whitespace-nowrap text-right text-[12px] font-bold leading-tight text-gray-800 sm:text-sm">
+                            <span className="min-w-0 whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_minggu)}
                             </span>
                           </div>
@@ -221,7 +221,7 @@ export default function Pricing() {
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Bulan
                             </span>
-                            <span className="min-w-0 whitespace-nowrap text-right text-[12px] font-bold leading-tight text-gray-800 sm:text-sm">
+                            <span className="min-w-0 whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_bulan)}
                             </span>
                           </div>
