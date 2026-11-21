@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { supabase } from "../utils/supabaseClient";
 
 const WHATSAPP_NUMBER = "6283856567166";
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 
 const formatRupiah = (value) => {
   if (value === null || value === undefined || value === "") {
@@ -22,17 +23,17 @@ const getImageUrl = (path) => {
 
   const cleanPath = String(path)
     .trim()
-    .replace(/^["']|["']$/g, "");
+    .replace(/^["']|["']$/g, "")
+    .replace(/^\/+/, "");
 
-  if (cleanPath.startsWith("http")) {
+  if (cleanPath.startsWith("http://") || cleanPath.startsWith("https://")) {
     return cleanPath;
   }
 
-  const { data } = supabase.storage
-    .from("katalog")
-    .getPublicUrl(cleanPath);
-
-  return data?.publicUrl || "";
+  return `${SUPABASE_URL}/storage/v1/object/public/katalog/${cleanPath
+    .split("/")
+    .map(encodeURIComponent)
+    .join("/")}`;
 };
 
 export default function Pricing() {
@@ -90,7 +91,6 @@ export default function Pricing() {
       className="w-full overflow-hidden bg-white px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
     >
       <div className="mx-auto w-full max-w-7xl">
-
         {/* JUDUL KATALOG */}
         <motion.div
           initial="hidden"
@@ -142,7 +142,6 @@ export default function Pricing() {
         {/* GRID KATALOG */}
         {!loading && !error && projects.length > 0 && (
           <div className="grid w-full grid-cols-1 justify-items-center gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
             {projects.map((project, index) => {
               const imageUrl = getImageUrl(project.gambar_path);
 
@@ -159,14 +158,17 @@ export default function Pricing() {
                   }}
                   className="group flex h-full w-full min-w-0 max-w-[380px] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl xl:max-w-none"
                 >
-
-                  {/* FOTO ALAT: AREA SELALU SAMA */}
+                  {/* FOTO ALAT */}
                   <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-gray-50">
                     {imageUrl ? (
                       <img
                         src={imageUrl}
                         alt={project.nama_alat || "Foto alat rental"}
                         loading="lazy"
+                        onError={(e) => {
+                          console.error("Gagal memuat gambar:", imageUrl);
+                          e.currentTarget.style.display = "none";
+                        }}
                         className="absolute inset-0 h-full w-full object-contain p-2 transition duration-500 group-hover:scale-[1.03]"
                       />
                     ) : (
@@ -178,56 +180,44 @@ export default function Pricing() {
 
                   {/* INFORMASI ALAT */}
                   <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5">
-
-                    {/* NAMA ALAT */}
                     <h3 className="min-w-0 break-words text-lg font-bold leading-snug text-gray-900 sm:text-xl">
                       {project.nama_alat}
                     </h3>
 
-
                     {/* HARGA SEWA */}
                     <div className="mt-auto pt-2">
                       <div className="rounded-xl bg-gray-50 p-3 sm:p-2">
-
                         <h4 className="mb-2 text-sm font-bold sm:text-base">
                           Harga Sewa
                         </h4>
 
                         <div className="flex flex-col">
-
-                          {/* PER HARI */}
                           <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-2">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Hari
                             </span>
-
                             <span className="min-w-0 whitespace-nowrap text-right text-[12px] font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_hari)}
                             </span>
                           </div>
 
-                          {/* PER MINGGU */}
                           <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-2">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Minggu
                             </span>
-
                             <span className="min-w-0 whitespace-nowrap text-right text-[12px] font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_minggu)}
                             </span>
                           </div>
 
-                          {/* PER BULAN */}
                           <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 py-2">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Bulan
                             </span>
-
                             <span className="min-w-0 whitespace-nowrap text-right text-[12px] font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_bulan)}
                             </span>
                           </div>
-
                         </div>
                       </div>
 
@@ -246,21 +236,18 @@ export default function Pricing() {
                           fill="currentColor"
                           className="h-5 w-5 shrink-0"
                         >
-                          <path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.9 11.9 0 0 0 5.8 1.48h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.49-8.43ZM12.08 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.97.99-3.63-.23-.37a9.88 9.88 0 0 1-1.52-5.25c0-5.46 4.45-9.91 9.92-9.91a9.85 9.85 0 0 1 7.01 2.91 9.85 9.85 0 0 1 2.9 7.01c0 5.46-4.45 9.91-9.95 9.91Zm5.44-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
+                          <path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.9 11.9 0 0 0 5.8 1.48h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.49-8.43ZM12.08 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.97.99-3.63-.23-.37a9.88 9.88 0 0 1-1.52-5.25c0-5.46 4.45-9.91 9.92-9.91a9.85 9.85 0 0 1 7.01 2.91 9.85 9.85 0 0 1 2.9 7.01c0 5.46-4.45 9.91-9.95 9.91Zm5.44-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.13-.17.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" />
                         </svg>
 
                         <span>Hubungi via WhatsApp</span>
                       </motion.a>
                     </div>
-
                   </div>
                 </motion.div>
               );
             })}
-
           </div>
         )}
-
       </div>
     </section>
   );
