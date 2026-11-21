@@ -141,7 +141,7 @@ export default function Pricing() {
 
         {/* GRID KATALOG */}
         {!loading && !error && projects.length > 0 && (
-          <div className="grid grid-cols-1 justify-items-center gap-6 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-7 xl:grid-cols-4">
+          <div className="grid w-full grid-cols-1 justify-items-center gap-6 px-2 sm:px-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
             {projects.map((project, index) => {
               const imageUrl = getImageUrl(project.gambar_path);
@@ -180,7 +180,7 @@ export default function Pricing() {
                   <div className="flex min-w-0 flex-1 flex-col px-4 pb-4 pt-2 sm:px-5 sm:pb-5 sm:pt-3">
 
                     {/* NAMA ALAT */}
-                    <h3 className="min-w-0 break-words text-lg font-bold leading-snug text-gray-900 sm:text-xl">
+                    <h3 className="min-w-0 break-words [overflow-wrap:anywhere] text-lg font-bold leading-snug sm:text-xl">
                       {project.nama_alat}
                     </h3>
 
@@ -199,7 +199,7 @@ export default function Pricing() {
                             Per Hari
                           </span>
 
-                          <span className="min-w-0 break-words text-right text-sm font-bold text-gray-800 sm:text-base">
+                          <span className="min-w-0 break-words [overflow-wrap:anywhere] text-right text-sm font-bold leading-snug sm:text-base">
                             {formatRupiah(project.harga_hari)}
                           </span>
                         </div>
@@ -210,7 +210,7 @@ export default function Pricing() {
                             Per Minggu
                           </span>
 
-                          <span className="min-w-0 break-words text-right text-sm font-bold text-gray-800 sm:text-base">
+                          <span className="min-w-0 break-words [overflow-wrap:anywhere] text-right text-sm font-bold leading-snug sm:text-base">
                             {formatRupiah(project.harga_minggu)}
                           </span>
                         </div>
@@ -221,7 +221,7 @@ export default function Pricing() {
                             Per Bulan
                           </span>
 
-                          <span className="min-w-0 break-words text-right text-sm font-bold text-gray-800 sm:text-base">
+                          <span className="min-w-0 break-words [overflow-wrap:anywhere] text-right text-sm font-bold leading-snug sm:text-base">
                             {formatRupiah(project.harga_bulan)}
                           </span>
                         </div>
