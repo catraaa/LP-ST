@@ -186,20 +186,20 @@ export default function Pricing() {
                   </div>
 
                   {/* INFORMASI ALAT */}
-                  <div className="flex min-w-0 flex-1 flex-col p-4 sm:p-5">
+                  <div className="flex min-w-0 flex-1 flex-col px-2 pt-1 pb-2 sm:px-5 sm:pt-2 sm:pb-3">
                     <h3 className="min-w-0 break-words text-lg font-bold leading-snug text-gray-900 sm:text-xl">
                       {project.nama_alat}
                     </h3>
 
                     {/* HARGA SEWA */}
-                    <div className="mt-auto pt-2">
-                      <div className="rounded-xl bg-gray-50 p-3 sm:p-2">
-                        <h4 className="mb-2 text-sm font-bold sm:text-base">
+                    <div className="mt-0 pt-1">
+                      <div className="rounded-xl bg-gray-50 px-3 py-1 sm:px-3 sm:py-1">
+                        <h4 className="mb-1 text-sm font-bold sm:text-base">
                           Harga Sewa
                         </h4>
 
                         <div className="flex flex-col">
-                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-2">
+                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Hari
                             </span>
@@ -208,7 +208,7 @@ export default function Pricing() {
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-2">
+                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Minggu
                             </span>
@@ -217,7 +217,7 @@ export default function Pricing() {
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 py-2">
+                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Bulan
                             </span>
