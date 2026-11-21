@@ -162,15 +162,22 @@ export default function Pricing() {
                   <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-gray-50">
                     {imageUrl ? (
                       <img
-                        src={imageUrl}
-                        alt={project.nama_alat || "Foto alat rental"}
-                        loading="lazy"
-                        onError={(e) => {
-                          console.error("Gagal memuat gambar:", imageUrl);
-                          e.currentTarget.style.display = "none";
-                        }}
-                        className="absolute inset-0 h-full w-full object-contain p-2 transition duration-500 group-hover:scale-[1.03]"
-                      />
+  src={imageUrl}
+  alt={project.nama_alat || "Foto alat rental"}
+  width="640"
+  height="400"
+  loading="eager"
+  style={{
+    display: "block",
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+    objectPosition: "center",
+    position: "relative",
+    zIndex: 1,
+  }}
+  className="p-2 transition duration-500 group-hover:scale-[1.03]"
+/>
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center text-sm text-gray-400">
                         Foto belum tersedia
