@@ -40,7 +40,7 @@ const PreviousArrow = ({ onClick }) => (
     className="absolute top-1/2 left-3 z-10 -translate-y-1/2 cursor-pointer"
     onClick={onClick}
   >
-    <div className="rounded-full bg-white p-2 shadow-md transition hover:bg-white/80">
+    <div className="rounded-full bg-white-500 p-2 shadow-md transition hover:bg-white/80">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6 text-gray-800"
@@ -65,7 +65,7 @@ const NextArrow = ({ onClick }) => (
     className="absolute top-1/2 right-3 z-10 -translate-y-1/2 cursor-pointer"
     onClick={onClick}
   >
-    <div className="rounded-full bg-white p-2 shadow-md transition hover:bg-white/80">
+    <div className="rounded-full bg-white-500 p-2 shadow-md transition hover:bg-white/80">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-6 w-6 text-gray-800"
