@@ -199,7 +199,7 @@ export default function Pricing() {
                         </h4>
 
                         <div className="flex flex-col">
-                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-1">
+                          <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-2 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Hari
                             </span>
@@ -208,7 +208,7 @@ export default function Pricing() {
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 py-1">
+                          <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-2 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Minggu
                             </span>
@@ -217,7 +217,7 @@ export default function Pricing() {
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 py-1">
+                          <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-2 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Bulan
                             </span>
