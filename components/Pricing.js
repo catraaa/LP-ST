@@ -199,29 +199,29 @@ export default function Pricing() {
                         </h4>
 
                         <div className="flex flex-col">
-                          <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-2 py-1">
+                          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 border-b border-gray-200 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Hari
                             </span>
-                            <span className="min-w-0 whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
+                            <span className="whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_hari)}
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-2 py-1">
+                          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 border-b border-gray-200 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Minggu
                             </span>
-                            <span className="min-w-0 whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
+                            <span className="whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_minggu)}
                             </span>
                           </div>
 
-                          <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-2 py-1">
+                          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 py-1">
                             <span className="whitespace-nowrap text-xs text-black-500 sm:text-sm">
                               Per Bulan
                             </span>
-                            <span className="min-w-0 whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
+                            <span className="whitespace-nowrap text-right text-xs font-bold leading-tight text-gray-800 sm:text-sm">
                               {formatRupiah(project.harga_bulan)}
                             </span>
                           </div>
