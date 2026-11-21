@@ -144,33 +144,33 @@ const Pricing = () => {
                     </h3>
 
                     {/* Harga */}
-                    <div className="mt-auto space-y-2 pt-4">
-  <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 pb-2">
-    <span className="whitespace-nowrap text-xs sm:text-sm">
-      Per Hari
-    </span>
-    <span className="whitespace-nowrap text-right text-xs font-semibold sm:text-sm">
-      {formatRupiah(item.harga_hari)}
-    </span>
-  </div>
+                    <div className="mt-auto space-y-2 pt-2">
+                      <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1">
+                        <span className="whitespace-nowrap text-xs sm:text-sm">
+                          Per Hari
+                        </span>
+                        <span className="whitespace-nowrap text-right text-xs font-semibold sm:text-sm">
+                          {formatRupiah(item.harga_hari)}
+                        </span>
+                      </div>
 
-  <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 pb-2">
-    <span className="whitespace-nowrap text-xs sm:text-sm">
-      Per Minggu
-    </span>
-    <span className="whitespace-nowrap text-right text-xs font-semibold sm:text-sm">
-      {formatRupiah(item.harga_minggu)}
-    </span>
-  </div>
+                      <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1">
+                        <span className="whitespace-nowrap text-xs sm:text-sm">
+                          Per Minggu
+                        </span>
+                        <span className="whitespace-nowrap text-right text-xs font-semibold sm:text-sm">
+                          {formatRupiah(item.harga_minggu)}
+                        </span>
+                      </div>
 
-  <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1 border-b border-gray-200 pb-2">
-    <span className="whitespace-nowrap text-xs sm:text-sm">
-      Per Bulan
-    </span>
-    <span className="whitespace-nowrap text-right text-xs font-semibold sm:text-sm">
-      {formatRupiah(item.harga_bulan)}
-    </span>
-  </div>
+                      <div className="grid grid-cols-[minmax(76px,0.8fr)_minmax(0,1.2fr)] items-center gap-1">
+                        <span className="whitespace-nowrap text-xs sm:text-sm">
+                          Per Bulan
+                        </span>
+                        <span className="whitespace-nowrap text-right text-xs font-semibold sm:text-sm">
+                          {formatRupiah(item.harga_bulan)}
+                        </span>
+                      </div>
 
                       {/* Tombol WhatsApp */}
                       <motion.a
