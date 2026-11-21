@@ -1,68 +1,59 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { supabase } from "../utils/supabaseClient";
 
-const Galeri = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    prevArrow: <PreviousArrow />,
-    nextArrow: <NextArrow />,
-  };
+// Membersihkan tanda petik pada path gambar
+const cleanImagePath = (path) => {
+  if (!path) return "";
 
-  const images = [
-    { src: "/assets/g1.jpg", caption: "Blower 12 inch" },
-    { src: "/assets/g2.jpg", caption: "Proyek Compressor cat dan texture" },
-    { src: "/assets/g3.jpg", caption: "Proyek Cutting beton" },
-    { src: "/assets/g4.jpg", caption: "Compressor cat dan texture" },
-    { src: "/assets/g6 (2).jpg", caption: "Proyek Genset" },
-    { src: "/assets/g5.jpg", caption: "Proyek Jack drill beton/dinding" },
-    { src: "/assets/g7.jpg", caption: "Proyek Jack hammer" },
-    { src: "/assets/g8.jpg", caption: "Proyek Pompa air" },
-    { src: "/assets/g9.jpg", caption: "Proyek Power trowel" },
-    { src: "/assets/g10.jpg", caption: "Proyek Satmper kodok" },
-    { src: "/assets/g11.jpg", caption: "Proyek Stamper pemadat tanah" },
-    { src: "/assets/g12.jpg", caption: "Proyek Vibrator cor" },
-    { src: "/assets/g13.jpg", caption: "Proyek Coring beton" },
-    { src: "/assets/g14.jpg", caption: "Proyek Blower 12 inch" },
-    { src: "/assets/g15.jpg", caption: "Proyek Cutting beton" },
-    { src: "/assets/g16.jpg", caption: "Proyek Jack drill beton/dinding" },
-    { src: "/assets/g6.jpg", caption: "Proyek Genset" },
-    { src: "/assets/g17.jpg", caption: "Proyek Jack hammer" },
-    { src: "/assets/g18.jpg", caption: "Proyek Pompa air" },
-    { src: "/assets/g19.jpg", caption: "Proyek Stamper kodok" },
-  ];
+  return String(path)
+    .trim()
+    .replace(/^["']|["']$/g, "");
+};
 
-  return (
-    <div className="pt-20 md:p-20" id="galeri">
-      <h3 className="text-center text-2xl md:text-3xl pb-10 font-semibold text-black-600">Galeri Proyek</h3>
-      <Slider {...settings} className="rounded-lg">
-        {images.map((image, index) => (
-          <div key={index} className="p-2">
-            <div className="relative h-64 md:h-80">
-              <Image src={image.src} alt={`Image ${index + 1}`} layout="fill" objectFit="cover" className="rounded-lg" />
-              <div className="absolute bottom-0 w-full bg-maroon-500 text-white-500 text-center py-2">{image.caption}</div>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
+// Mengambil URL gambar Supabase
+const getImageUrl = (path) => {
+  const cleanPath = cleanImagePath(path);
+
+  if (!cleanPath) return "";
+
+  if (
+    cleanPath.startsWith("http://") ||
+    cleanPath.startsWith("https://")
+  ) {
+    return cleanPath;
+  }
+
+  const { data } = supabase.storage
+    .from("galeri")
+    .getPublicUrl(cleanPath);
+
+  return data?.publicUrl || "";
 };
 
 // Tombol Previous
 const PreviousArrow = ({ onClick }) => (
-  <div className="absolute top-1/2 left-3 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
-    <div className="bg-white-500 hover:bg-white/80 rounded-full p-2">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+  <div
+    className="absolute top-1/2 left-3 z-10 -translate-y-1/2 cursor-pointer"
+    onClick={onClick}
+  >
+    <div className="rounded-full bg-white p-2 shadow-md transition hover:bg-white/80">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6 text-gray-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M15 19l-7-7 7-7"
+        />
       </svg>
     </div>
   </div>
@@ -70,13 +61,182 @@ const PreviousArrow = ({ onClick }) => (
 
 // Tombol Next
 const NextArrow = ({ onClick }) => (
-  <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-10 cursor-pointer" onClick={onClick}>
-    <div className="bg-white-500 hover:bg-white/80 rounded-full p-2">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  <div
+    className="absolute top-1/2 right-3 z-10 -translate-y-1/2 cursor-pointer"
+    onClick={onClick}
+  >
+    <div className="rounded-full bg-white p-2 shadow-md transition hover:bg-white/80">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6 text-gray-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9 5l7 7-7 7"
+        />
       </svg>
     </div>
   </div>
 );
+
+const Galeri = () => {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Mengambil data proyek dan foto dari Supabase
+  useEffect(() => {
+    let mounted = true;
+
+    const fetchGaleri = async () => {
+      try {
+        const { data: projects, error: projectError } =
+          await supabase
+            .from("galeri_proyek")
+            .select("id, judul, deskripsi, created_at")
+            .order("id", { ascending: false });
+
+        if (projectError) throw projectError;
+
+        const projectIds = (projects || []).map(
+          (project) => project.id
+        );
+
+        if (projectIds.length === 0) {
+          if (mounted) {
+            setImages([]);
+            setLoading(false);
+          }
+          return;
+        }
+
+        const { data: photos, error: photoError } =
+          await supabase
+            .from("galeri_foto")
+            .select("id, proyek_id, gambar_path")
+            .in("proyek_id", projectIds)
+            .order("id", { ascending: true });
+
+        if (photoError) throw photoError;
+
+        const projectMap = {};
+
+        projects.forEach((project) => {
+          projectMap[String(project.id)] = project;
+        });
+
+        const galleryImages = (photos || [])
+          .map((photo) => {
+            const project = projectMap[String(photo.proyek_id)];
+
+            if (!project) return null;
+
+            return {
+              id: photo.id,
+              src: getImageUrl(photo.gambar_path),
+              caption: project.judul,
+              description: project.deskripsi,
+            };
+          })
+          .filter((image) => image && image.src);
+
+        if (mounted) {
+          setImages(galleryImages);
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error("Gagal mengambil galeri:", error);
+
+        if (mounted) {
+          setImages([]);
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchGaleri();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  // Pengaturan slider seperti desain sebelumnya
+  const settings = {
+    dots: false,
+    infinite: images.length > 2,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: images.length > 2,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    arrows: true,
+    prevArrow: <PreviousArrow />,
+    nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  return (
+    <div className="pt-20 md:p-20" id="galeri">
+
+      {/* JUDUL */}
+      <h3 className="pb-10 text-center text-2xl font-semibold text-black-600 md:text-3xl">
+        Galeri Proyek
+      </h3>
+
+      {/* LOADING */}
+      {loading ? (
+        <p className="py-12 text-center text-sm text-gray-500">
+          Memuat galeri proyek...
+        </p>
+      ) : images.length === 0 ? (
+        <p className="py-12 text-center text-sm text-gray-500">
+          Belum ada foto proyek yang tersedia.
+        </p>
+      ) : (
+
+        /* SLIDER */
+        <Slider {...settings} className="rounded-lg">
+
+          {images.map((image, index) => (
+            <div key={image.id} className="p-2">
+
+              <div className="relative h-64 md:h-80">
+
+                {/* GAMBAR */}
+                <img
+                  src={image.src}
+                  alt={image.caption || `Foto proyek ${index + 1}`}
+                  className="h-full w-full rounded-lg object-cover"
+                  loading="lazy"
+                />
+
+                {/* CAPTION */}
+                <div className="absolute bottom-0 w-full rounded-b-lg bg-maroon-500 px-3 py-2 text-center text-white">
+                  {image.caption}
+                </div>
+
+              </div>
+            </div>
+          ))}
+
+        </Slider>
+      )}
+    </div>
+  );
+};
 
 export default Galeri;
