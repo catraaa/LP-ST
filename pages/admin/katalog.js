@@ -70,7 +70,6 @@ export default function AdminKatalog() {
 
   const initialForm = {
     nama_alat: "",
-    deskripsi: "",
     harga_hari: "",
     harga_minggu: "",
     harga_bulan: "",
@@ -123,7 +122,7 @@ export default function AdminKatalog() {
     const { data, error } = await supabase
       .from("katalog")
       .select(
-        "id, nama_alat, deskripsi, harga_hari, harga_minggu, harga_bulan, gambar_path, created_at, updated_at"
+        "id, nama_alat, harga_hari, harga_minggu, harga_bulan, gambar_path, created_at, updated_at"
       )
       .order("id", { ascending: true });
 
@@ -228,7 +227,6 @@ export default function AdminKatalog() {
 
       const payload = {
         nama_alat: form.nama_alat.trim(),
-        deskripsi: form.deskripsi.trim(),
         harga_hari:
           form.harga_hari === "" ? null : Number(form.harga_hari),
         harga_minggu:
@@ -282,7 +280,6 @@ export default function AdminKatalog() {
 
     setForm({
       nama_alat: item.nama_alat || "",
-      deskripsi: item.deskripsi || "",
       harga_hari: item.harga_hari ?? "",
       harga_minggu: item.harga_minggu ?? "",
       harga_bulan: item.harga_bulan ?? "",
@@ -452,14 +449,6 @@ export default function AdminKatalog() {
                 Deskripsi
               </label>
 
-              <textarea
-                name="deskripsi"
-                value={form.deskripsi}
-                onChange={handleChange}
-                rows={4}
-                placeholder="Masukkan deskripsi alat"
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-              />
             </div>
 
             {/* HARGA */}
@@ -636,10 +625,6 @@ export default function AdminKatalog() {
                       <h3 className="text-base font-bold text-black-600">
                         {item.nama_alat}
                       </h3>
-
-                      <p className="mt-2 whitespace-pre-line text-sm leading-5 text-black-600">
-                        {item.deskripsi || "Tidak ada deskripsi."}
-                      </p>
 
                       <div className="mt-4 rounded-lg bg-gray-50 p-3">
                         <h4 className="mb-2 text-xs font-bold text-black-600">
